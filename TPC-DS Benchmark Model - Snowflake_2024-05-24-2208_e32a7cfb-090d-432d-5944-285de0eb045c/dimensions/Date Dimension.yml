@@ -1,0 +1,79 @@
+unique_name: Date Dimension
+object_type: dimension
+label: Date Dimension
+type: time
+
+hierarchies:
+
+  - unique_name: Date Dimension
+    label: Date Month Hierarchy
+    folder: Date Attributes
+    filter_empty: "yes"
+
+    levels:
+
+      - unique_name: Calendar Year
+        time_unit: year
+
+      - unique_name: Calendar Quarter
+        time_unit: quarter
+
+      - unique_name: Calendar Month
+        time_unit: month
+
+        secondary_attributes:
+
+          - unique_name: d_month_of_year
+            label: Month of Year
+            folder: Date Attributes
+            dataset: date_dim
+            name_column: D_MOY
+            key_columns:
+              - D_MOY
+            sort_column: D_MOY
+
+          - unique_name: d_month_sequence
+            label: Month Sequence
+            folder: Date Attributes
+            dataset: date_dim
+            name_column: D_MONTH_SEQ
+            key_columns:
+              - D_MONTH_SEQ
+            sort_column: D_MONTH_SEQ
+
+      - unique_name: Time Dimension
+        time_unit: day
+
+level_attributes:
+
+  - unique_name: Calendar Month
+    label: Calendar Month
+    dataset: date_dim
+    name_column: YEAR_MONTH
+    key_columns:
+      - D_QUARTER_NAME
+      - YEAR_MONTH
+
+  - unique_name: Calendar Quarter
+    label: Calendar Quarter
+    dataset: date_dim
+    name_column: D_QUARTER_NAME
+    key_columns:
+      - D_QUARTER_NAME
+    sort_column: D_QOY
+
+  - unique_name: Calendar Year
+    label: Calendar Year
+    dataset: date_dim
+    name_column: D_YEAR
+    key_columns:
+      - D_YEAR
+    sort_column: D_YEAR
+
+  - unique_name: Time Dimension
+    label: Date
+    is_unique_key: true
+    dataset: date_dim
+    name_column: D_DATE
+    key_columns:
+      - D_DATE_SK

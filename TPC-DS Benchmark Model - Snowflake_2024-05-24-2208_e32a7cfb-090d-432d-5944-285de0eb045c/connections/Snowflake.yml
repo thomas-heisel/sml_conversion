@@ -1,0 +1,5 @@
+unique_name: Snowflake
+label: Snowflake
+object_type: connection
+as_connection: Snowflake
+schema: tpcds_10tb
