@@ -1,0 +1,6 @@
+unique_name: sml_conversion
+object_type: catalog
+label: sml_conversion
+aggressive_agg_promotion: false
+as_version: 1
+build_speculative_aggs: true
