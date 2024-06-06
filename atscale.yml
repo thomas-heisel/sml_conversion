@@ -1,6 +1,6 @@
 unique_name: sml_conversion
 object_type: catalog
-label: sml_conversion
+label: models
+as_version: 1.0
 aggressive_agg_promotion: false
-as_version: 1
-build_speculative_aggs: true
+build_speculative_aggs: false

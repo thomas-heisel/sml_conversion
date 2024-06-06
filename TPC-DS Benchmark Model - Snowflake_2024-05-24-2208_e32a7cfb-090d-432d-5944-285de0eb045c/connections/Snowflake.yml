@@ -2,4 +2,5 @@ unique_name: Snowflake
 label: Snowflake
 object_type: connection
 as_connection: Snowflake
+database: SE_DEMO_LIBRARY
 schema: tpcds_10tb

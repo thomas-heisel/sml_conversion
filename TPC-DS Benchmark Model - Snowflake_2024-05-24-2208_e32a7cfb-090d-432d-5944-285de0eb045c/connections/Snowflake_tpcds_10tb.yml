@@ -1,5 +1,5 @@
 unique_name: Snowflake_tpcds_10tb
-label: Snowflake_tpcds_10tb
+label: Snowflake
 object_type: connection
 as_connection: Snowflake
 database: SE_DEMO_LIBRARY
