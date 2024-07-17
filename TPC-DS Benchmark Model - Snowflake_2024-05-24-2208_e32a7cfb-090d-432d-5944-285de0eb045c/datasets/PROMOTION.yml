@@ -1,7 +1,7 @@
 unique_name: PROMOTION
 object_type: dataset
 label: PROMOTION
-connection_id: Snowflake_tpcds_10tb
+connection_id: Snowflake
 table: promotion
 
 columns:

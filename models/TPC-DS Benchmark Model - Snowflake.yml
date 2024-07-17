@@ -1,0 +1,14 @@
+unique_name: TPC-DS Benchmark Model - Snowflake
+object_type: model
+label: TPC-DS Benchmark Model - Snowflake
+metrics:
+  - unique_name: m_ss_quantity_sum
+relationships:
+  - unique_name: store_sales_SS_SOLD_DATE_SK_to_Date Dimension_Time Dimension
+    from:
+      dataset: store_sales
+      join_columns:
+        - SS_SOLD_DATE_SK
+    to:
+      dimension: Date Dimension
+      level: Time Dimension

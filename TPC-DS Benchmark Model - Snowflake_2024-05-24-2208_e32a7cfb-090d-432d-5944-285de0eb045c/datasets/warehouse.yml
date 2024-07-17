@@ -1,7 +1,7 @@
 unique_name: warehouse
 object_type: dataset
 label: warehouse
-connection_id: Snowflake_tpcds_10tb
+connection_id: Snowflake
 table: warehouse
 
 columns:
