@@ -3,12 +3,84 @@ object_type: model
 label: TPC-DS Benchmark Model - Snowflake
 metrics:
   - unique_name: m_ss_quantity_sum
+  - unique_name: m_SS Row Counter_sum
+  - unique_name: m_SS_CUSTOMER_SK_count
+  - unique_name: m_WS Row Counter_sum
+  - unique_name: m_WS_BILL_CUSTOMER_SK_count
+  - unique_name: m_purchased_amount_in_store
+  - unique_name: m_purchased_amount_on_web
+  - unique_name: m_ss_net_paid_inc_tax_sum
+  - unique_name: m_ss_sales_price_avg
+  - unique_name: m_store_coupon_amt_sum
+  - unique_name: m_store_sales_price
+  - unique_name: m_web_sales_net_paid
+  - unique_name: m_web_sales_sum
+  - unique_name: m_ss_list_price_avg
+  - unique_name: m_ss_net_paid_sum
+  - unique_name: m_ws_net_paid_inc_tax_sum
+  - unique_name: m_ws_net_paid_sum
+  - unique_name: m_ws_net_profit_sum
+  - unique_name: m_ws_quantity_sum
+  - unique_name: m_ws_ext_discount_amt_sum
+  - unique_name: m_ws_ext_ship_cost_sum
+  - unique_name: m_ws_ext_wholesale_cost_sum
 relationships:
   - unique_name: store_sales_SS_SOLD_DATE_SK_to_Date Dimension_Time Dimension
     from:
       dataset: store_sales
       join_columns:
         - SS_SOLD_DATE_SK
+    role_play: Sold {0}
     to:
       dimension: Date Dimension
       level: Time Dimension
+  - unique_name: web_sales_WS_SHIP_DATE_SK_to_Date Dimension_Time Dimension
+    from:
+      dataset: web_sales
+      join_columns:
+        - WS_SHIP_DATE_SK
+    role_play: Ship {0}
+    to:
+      dimension: Date Dimension
+      level: Time Dimension
+  - unique_name: web_sales_WS_SOLD_DATE_SK_to_Date Dimension_Time Dimension
+    from:
+      dataset: web_sales
+      join_columns:
+        - WS_SOLD_DATE_SK
+    role_play: Sold {0}
+    to:
+      dimension: Date Dimension
+      level: Time Dimension
+  - unique_name: web_sales_WS_BILL_CDEMO_SK_to_Customer Demographics_Customer Demographics
+    from:
+      dataset: web_sales
+      join_columns:
+        - WS_BILL_CDEMO_SK
+    to:
+      dimension: Customer Demographics
+      level: Customer Demographics
+  - unique_name: store_sales_SS_CDEMO_SK_to_Customer Demographics_Customer Demographics
+    from:
+      dataset: store_sales
+      join_columns:
+        - SS_CDEMO_SK
+    to:
+      dimension: Customer Demographics
+      level: Customer Demographics
+  - unique_name: web_sales_WS_ITEM_SK_to_Product Dimension_Product Dimension
+    from:
+      dataset: web_sales
+      join_columns:
+        - WS_ITEM_SK
+    to:
+      dimension: Product Dimension
+      level: Product Dimension
+  - unique_name: store_sales_SS_ITEM_SK_to_Product Dimension_Product Dimension
+    from:
+      dataset: store_sales
+      join_columns:
+        - SS_ITEM_SK
+    to:
+      dimension: Product Dimension
+      level: Product Dimension
