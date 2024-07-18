@@ -84,3 +84,59 @@ relationships:
     to:
       dimension: Product Dimension
       level: Product Dimension
+  - unique_name: store_sales_SS_STORE_SK_to_Store Dimension_Store Dimension
+    from:
+      dataset: store_sales
+      join_columns:
+        - SS_STORE_SK
+    to:
+      dimension: Store Dimension
+      level: Store Dimension
+  - unique_name: store_sales_SS_CUSTOMER_SK_to_Customer Dimension_Customer Number
+    from:
+      dataset: store_sales
+      join_columns:
+        - SS_CUSTOMER_SK
+    to:
+      dimension: Customer Dimension
+      level: Customer Number
+  - unique_name: web_sales_WS_BILL_CUSTOMER_SK_to_Customer Dimension_Customer Number
+    from:
+      dataset: web_sales
+      join_columns:
+        - WS_BILL_CUSTOMER_SK
+    to:
+      dimension: Customer Dimension
+      level: Customer Number
+  - unique_name: web_sales_WS_WAREHOUSE_SK_to_Fulfilling Warehouse_Fulfilling Warehouse
+    from:
+      dataset: web_sales
+      join_columns:
+        - WS_WAREHOUSE_SK
+    to:
+      dimension: Fulfilling Warehouse
+      level: Fulfilling Warehouse
+  - unique_name: web_sales_WS_PROMO_SK_to_Promotions_Promotions
+    from:
+      dataset: web_sales
+      join_columns:
+        - WS_PROMO_SK
+    to:
+      dimension: Promotions
+      level: Promotions
+  - unique_name: store_sales_SS_PROMO_SK_to_Promotions_Promotions
+    from:
+      dataset: store_sales
+      join_columns:
+        - SS_PROMO_SK
+    to:
+      dimension: Promotions
+      level: Promotions
+  - unique_name: web_sales_WS_SHIP_MODE_SK_to_Ship Mode_Ship Mode
+    from:
+      dataset: web_sales
+      join_columns:
+        - WS_SHIP_MODE_SK
+    to:
+      dimension: Ship Mode
+      level: Ship Mode
