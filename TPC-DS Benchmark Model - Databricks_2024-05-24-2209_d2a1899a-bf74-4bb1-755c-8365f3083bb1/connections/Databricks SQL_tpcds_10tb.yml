@@ -1,0 +1,6 @@
+unique_name: Databricks SQL_tpcds_10tb
+label: Databricks SQL_tpcds_10tb
+object_type: connection
+as_connection: Databricks SQL
+database: hive_metastore
+schema: tpcds_10tb
