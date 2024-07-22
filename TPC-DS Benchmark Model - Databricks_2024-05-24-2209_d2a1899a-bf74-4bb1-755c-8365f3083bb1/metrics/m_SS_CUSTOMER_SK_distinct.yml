@@ -1,0 +1,6 @@
+unique_name: m_SS_CUSTOMER_SK_distinct
+object_type: metric
+label: Ss Customer Sk DC
+calculation_method: count distinct
+dataset: store_sales
+column: SS_CUSTOMER_SK
