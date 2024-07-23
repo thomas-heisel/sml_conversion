@@ -1,4 +1,4 @@
-unique_name: warehouse
+unique_name: warehouse_db
 object_type: dataset
 label: warehouse
 connection_id: Databricks SQL

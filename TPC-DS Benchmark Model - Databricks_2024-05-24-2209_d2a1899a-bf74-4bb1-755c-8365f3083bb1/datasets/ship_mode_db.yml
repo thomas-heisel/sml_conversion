@@ -1,4 +1,4 @@
-unique_name: ship_mode
+unique_name: ship_mode_db
 object_type: dataset
 label: ship_mode
 connection_id: Databricks SQL

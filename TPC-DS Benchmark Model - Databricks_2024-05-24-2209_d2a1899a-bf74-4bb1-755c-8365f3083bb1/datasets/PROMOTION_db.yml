@@ -1,4 +1,4 @@
-unique_name: PROMOTION
+unique_name: PROMOTION_db
 object_type: dataset
 label: PROMOTION
 connection_id: Databricks SQL

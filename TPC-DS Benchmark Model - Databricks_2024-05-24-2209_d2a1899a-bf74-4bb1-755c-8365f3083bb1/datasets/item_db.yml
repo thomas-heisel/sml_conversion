@@ -1,4 +1,4 @@
-unique_name: item
+unique_name: item_db
 object_type: dataset
 label: item
 connection_id: Databricks SQL

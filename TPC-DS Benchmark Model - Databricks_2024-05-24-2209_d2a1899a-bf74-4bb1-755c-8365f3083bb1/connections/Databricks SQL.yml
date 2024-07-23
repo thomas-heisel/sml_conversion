@@ -2,4 +2,5 @@ unique_name: Databricks SQL
 label: Databricks SQL
 object_type: connection
 as_connection: Databricks SQL
+database: hive_metastore
 schema: tpcds_10tb

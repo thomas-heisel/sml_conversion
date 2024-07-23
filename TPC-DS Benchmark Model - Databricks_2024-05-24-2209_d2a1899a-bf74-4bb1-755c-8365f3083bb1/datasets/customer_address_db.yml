@@ -1,14 +1,11 @@
-unique_name: customer_address
+unique_name: customer_address_db
 object_type: dataset
 label: customer_address
-connection_id: Databricks SQL
-table: customer_address
-
 columns:
   - name: CA_ADDRESS_ID
     data_type: string
   - name: CA_ADDRESS_SK
-    data_type: long
+    data_type: int
   - name: CA_CITY
     data_type: string
   - name: CA_COUNTRY
@@ -16,7 +13,7 @@ columns:
   - name: CA_COUNTY
     data_type: string
   - name: CA_GMT_OFFSET
-    data_type: "decimal(38,9)"
+    data_type: decimal(5,2)
   - name: CA_LOCATION_TYPE
     data_type: string
   - name: CA_STATE
@@ -31,3 +28,5 @@ columns:
     data_type: string
   - name: CA_ZIP
     data_type: string
+connection_id: Databricks SQL
+table: customer_address

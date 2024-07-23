@@ -1,4 +1,4 @@
-unique_name: customer_demographics
+unique_name: customer_demographics_db
 object_type: dataset
 label: customer_demographics
 connection_id: Databricks SQL

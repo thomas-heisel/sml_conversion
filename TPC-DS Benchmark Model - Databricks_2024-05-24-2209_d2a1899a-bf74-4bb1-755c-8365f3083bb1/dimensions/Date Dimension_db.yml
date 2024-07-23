@@ -1,4 +1,4 @@
-unique_name: Date Dimension
+unique_name: Date Dimension_db
 object_type: dimension
 label: Date Dimension
 type: time
@@ -13,13 +13,10 @@ hierarchies:
     levels:
 
       - unique_name: Calendar Year
-        time_unit: year
 
       - unique_name: Calendar Quarter
-        time_unit: quarter
 
       - unique_name: Calendar Month
-        time_unit: month
 
         secondary_attributes:
 
@@ -42,7 +39,6 @@ hierarchies:
             sort_column: D_MONTH_SEQ
 
       - unique_name: Time Dimension
-        time_unit: day
 
 level_attributes:
 

@@ -244,6 +244,7 @@ aggregates:
 
   - unique_name: Store Sales
     label: Store Sales
+    target_connection: Databricks SQL
     attributes:
 
       - name: Product Class
@@ -305,6 +306,7 @@ aggregates:
 
   - unique_name: Web Sales
     label: Web Sales
+    target_connection: Databricks SQL
     attributes:
 
       - name: Product Class

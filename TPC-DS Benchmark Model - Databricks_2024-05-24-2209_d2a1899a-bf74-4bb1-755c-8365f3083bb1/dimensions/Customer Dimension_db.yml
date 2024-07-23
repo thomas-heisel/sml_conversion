@@ -1,4 +1,4 @@
-unique_name: Customer Dimension
+unique_name: Customer Dimension_db
 object_type: dimension
 label: Customer Dimension
 type: standard
